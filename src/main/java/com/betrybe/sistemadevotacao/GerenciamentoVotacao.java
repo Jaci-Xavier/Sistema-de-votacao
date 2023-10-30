@@ -10,6 +10,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
   ArrayList<PessoaCandidata> pessoasCandidatas = new ArrayList<>();
   ArrayList<PessoaEleitora> pessoasEleitoras = new ArrayList<>();
   ArrayList<String> cpfsComputados = new ArrayList<>();
+
   @Override
   public void cadastrarPessoaCandidata(String nome, int numero) {
     for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
@@ -20,6 +21,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     PessoaCandidata candidato = new PessoaCandidata(nome, numero);
     pessoasCandidatas.add(candidato);
   }
+
   @Override
   public void cadastrarPessoaEleitora(String nome, String cpf) {
     for (PessoaEleitora pessoaEleitora : pessoasEleitoras) {
@@ -30,6 +32,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     PessoaEleitora eleitora = new PessoaEleitora(nome, cpf);
     pessoasEleitoras.add(eleitora);
   }
+
   @Override
   public void votar(String cpfPessoaEleitora, int numeroPessoaCandidata) {
     if (cpfsComputados.contains(cpfPessoaEleitora)) {
@@ -42,6 +45,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     }
     cpfsComputados.add(cpfPessoaEleitora);
   }
+
   @Override
   public void mostrarResultado() {
     if (cpfsComputados.isEmpty()) {
@@ -59,6 +63,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
           + "% )"
       );
     }
+    
     System.out.println("Total de votos: " + totalVotos);
   }
 }
