@@ -4,11 +4,11 @@ public abstract class Pessoa {
 
   protected String nome;
 
-  public String getName() {
+  public String getNome() {
     return nome;
   }
 
-  public void setName(String nome) {
+  public void setNome(String nome) {
     this.nome = nome;
   }
   
