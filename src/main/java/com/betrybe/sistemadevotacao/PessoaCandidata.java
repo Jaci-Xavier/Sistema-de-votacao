@@ -4,7 +4,7 @@ package com.betrybe.sistemadevotacao;
  * Classe que representa uma pessoa candidata.
  */
 
-public class PessoaCandidata extends Pessoa{
+public class PessoaCandidata extends Pessoa {
   int numero;
   int votos;
 
